@@ -228,6 +228,10 @@
     .bowl img{
         bottom:15px;
     }
+    
+    .table{
+        height:31px;
+    }
 }
 @media (max-width:620px) {
     .bowl img{
