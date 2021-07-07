@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+:root{
+    --GameOverFont:'Otomanopee One', sans-serif;
+    --Welcome: 'Zen Tokyo Zoo', cursive;
+    --LogoName:  'Zen Tokyo Zoo', cursive;
+    --Start:  'Lobster', cursive;
+    --Regular: 'Roboto', sans-serif;
+}
+
+*{  
+    font-family: var(--Regular);
+    padding:0;
+    margin:0;
+    overflow: hidden;
+}
+.btn{
+    cursor: pointer;
+}
+.welcome{    
+    position: absolute;
+    display: grid;
+    place-items: center;
+    left:25%;
+    top:25%;
+    right:25%;
+    bottom:25%;
+    font-size: 20px;
+    padding: 10px;
+    background: linear-gradient(rgb(245, 245, 79) , rgb(54, 54, 248));
+}
+.welcome>h1{
+    font-size: 7rem;
+    font-family: var(--Welcome);
+}
+
+.welcome .start {
+    width: auto;
+    height: 50px;
+    color: white;
+    background: transparent;
+    font-family: var(--LogoName);
+    font-size: 44px;
+    animation: btnAni 2.5s linear infinite;
+}
+.score{
+    position: absolute;
+    right: 10px;
+    top:10px;
+    width:100px;
+    height:50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    font-size: 20px;    
+    color: #fff;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(253, 253, 81) ;
+}
+
+.score>span{
+    margin-right:10px;
+}
+
+.buttons button{
+    background: transparent;
+    position: absolute;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    border: 3px solid;
+    border-radius: 50%;
+    font-weight: bold;
+    bottom: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.left{
+    left:10px;
+}
+
+.right{
+    right:10px;
+}
+
+.center{
+    left: 40%;
+}
+
+.maindiv{
+    width:101vw;
+    height:90vh;
+    background-image: url(img/background.png);
+    background-size: cover;
+}
+
+#over{
+    padding: 10px;
+    height: 130px;
+    display: grid;
+    place-items: center;
+    font-family: var(--GameOverFont);
+    position: absolute;
+    background: linear-gradient(rgb(136, 238, 216) , rgb(92, 152, 243));
+    left:25%;
+    top:25%;
+    right:25%;
+    bottom:25%;
+    font-size: 50px; 
+    border: 1px solid; 
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.overAni{
+    animation: gameoverAni 3s linear 1;
+}
+#over>button{
+    background: linear-gradient(hsl(167, 79%, 53%) , rgb(75, 111, 228));
+    border-radius: 5px;
+    font-size: 2rem;
+    height: 50px;
+    width: 100px;
+    animation: btnAni 2.5s linear infinite;
+}
+.eggs{
+    background-image: url(img/egg1.png);
+    width: 75px;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    width: 110px;
+    height: 150px;
+}
+
+.aniEgg{
+    animation: MoveEgg 3s linear;
+}
+
+.bowl img{
+    position: absolute;
+    z-index:1;
+    width:204px;
+    bottom: 32px;
+}
+
+.table{
+    position: absolute;
+    width:100vw;
+    height: 52px;
+    background-image: url(img/table.png);
+    background-size: cover;
+    border: 5px solid ;
+}
+
+@keyframes MoveEgg{
+    0%{
+        top:0px;
+    }
+    100%{
+        top:76%;
+    }
+}
+
+@keyframes btnAni{
+    0%{
+        border-top: 2px solid rgb(133, 57, 255)
+    }
+    25%{
+        border-left: 2px solid rgb(133, 57, 255)
+    }
+    50%{
+        border-right: 2px solid rgb(133, 57, 255)
+    }
+    100%{
+        border-bottom: 2px solid rgb(133, 57, 255)
+    }
+    
+}
+
+@keyframes gameoverAni {
+    0%{
+        font-size: 0px;
+    }
+    10%{
+        font-size: 10px;
+    }
+    20%{
+        font-size: 20px;
+    }
+    30%{
+        font-size: 30px;
+    }
+    40%{
+        font-size: 40px;
+    }
+    50%{
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width:773px) {
+    .welcome , #over{
+        position: absolute;
+        left: 10px;
+        right: 20px;
+    }
+}
+@media (max-width:404px) {
+    .welcome h1{
+        font-size: 90px;
+    }
+    
+    #over{
+        height: 40vh;
+    }
+}
+@media (max-width:620px) {
+    .bowl img{
+        width:133px;
+    }
+    .eggs{
+        width: 65px;
+        height: 89px;
+    }
+}
