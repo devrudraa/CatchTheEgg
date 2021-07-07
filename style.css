@@ -100,7 +100,6 @@
     height:90vh;
     background-image: url(img/background.png);
     background-size: cover;
-    overflow:hidden;
 }
 
 #over{
@@ -224,6 +223,10 @@
     
     #over{
         height: 40vh;
+    }
+
+    .bowl img{
+        bottom:20px;
     }
 }
 @media (max-width:620px) {
