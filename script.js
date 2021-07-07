@@ -32,9 +32,12 @@ setInterval(() => {
     TopPosiBowl = parseInt(window.getComputedStyle(bowl, null).getPropertyValue('top'));
     LeftPosiBowl = parseInt(window.getComputedStyle(bowl, null).getPropertyValue('left'));
     BodyWidth = parseInt(window.getComputedStyle(body, null).getPropertyValue('width'));
-
+    Widthegg = parseInt(window.getComputedStyle(eggs, null).getPropertyValue('width')) + 3;
+    widthbowl = parseInt(window.getComputedStyle(bowl, null).getPropertyValue('width'))+3;
+    
+    
     PosiEgg = Math.abs(TopPosiBowl - TopPosiEgg);
-    random = Math.floor(Math.random() * (BodyWidth - 204));
+    random = Math.floor(Math.random() * (BodyWidth - widthegg));
 
     if (PosiEgg <= 105) {
         if (LeftPosiEgg >= LeftPosiBowl && LeftPosiEgg <= (LeftPosiBowl + 199)) {
@@ -58,11 +61,11 @@ setInterval(() => {
         }
     }
 
-    if (LeftPosiBowl > (BodyWidth - 204)) {
+    if (LeftPosiBowl > (BodyWidth - (widthbowl-3))) {
         bowl.style.left = "0px";
     }
     else if (LeftPosiBowl < 0) {
-        bowl.style.left = (BodyWidth - 205) + 'px';
+        bowl.style.left = (BodyWidth - widthbowl) + 'px';
     }
 }, 10);
 
