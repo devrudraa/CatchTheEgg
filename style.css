@@ -69,19 +69,19 @@
     margin-right:10px;
 }
 
-.buttons button{
-    background: linear-gradient(#2193b0,#6dd5ed);
+.buttons input[type=range]{
+    background: #fdad2b;
     position: absolute;
     z-index: 5;
-    width: 60px;
-    height: 60px;
     border: 3px solid;
-    border-radius: 50%;
     font-weight: bold;
     bottom: 5px;
     outline: none;
     cursor: pointer;
-    
+    width:100vw; 
+    cursor: pointer;
+    /* width: 84vw;
+    left: 99px; */
 }
 
 .left{
@@ -97,7 +97,7 @@
 }
 
 .maindiv{
-    width:105vw;
+    width:101vw;
     height:90vh;
     background-image: url(img/background.png);
     background-size: cover;
@@ -138,9 +138,12 @@
     z-index: 5;
     position: absolute;
     top: 0;
-    background-size: cover;
+    background-size: contain;
     width: 110px;
     height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
 
 .aniEgg{
@@ -227,11 +230,7 @@
     }
 
     .bowl img{
-        bottom:15px;
-    }
-    
-    .table{
-        height:31px;
+        bottom:20px;
     }
 }
 @media (max-width:620px) {
