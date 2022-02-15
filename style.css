@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+body{
+  overflow: hidden;
+}
+
 :root {
   --GameOverFont: "Otomanopee One", sans-serif;
   --Welcome: "Zen Tokyo Zoo", cursive;
