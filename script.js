@@ -28,6 +28,8 @@ function game(){
     startMenu.style.visibility = 'hidden';
     eggs.style.left = random + "px";
     over = true;
+	value = BodyWidth - widthbowl
+	range.max = (value / BodyWidth * 100);
 }
 
 function resume() {
