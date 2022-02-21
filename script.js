@@ -47,6 +47,13 @@ function resume() {
     eggs.classList.add('aniEgg');
     GameOver.classList.remove('overAni');
     over = 1;
+    if(scoreCount > 10 && scoreCount < 20  ){
+        eggs.style.setProperty("-webkit-animation-duration", 2.5 + "s");
+    }else if(scoreCount > 20){
+        eggs.style.setProperty("-webkit-animation-duration", 1.5 + "s");
+    }else if(scoreCount > 100){
+        eggs.style.setProperty("-webkit-animation-duration", 1 + "s");
+    }
 }
 
 document.onkeydown = function (key) {
